@@ -1,0 +1,4 @@
+1] BEM allows you to write a css in such a way that it becomes independent of markup,
+   many times when markup changes, there is no need to change css.
+2] no HTML tag is mentioned in BEM css, everything is driven by classes.
+3] BEM can be used with sass or with styled components   
