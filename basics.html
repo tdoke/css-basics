@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSS BASICS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    .default-box-model {
+        height: 100px;
+        width: 100px;
+        background-color:blue;
+        margin: 5px;
+        padding: 20px;
+        border: 5px solid;
+        border-color: black;
+    }
+    .with-box-sizing--border-box {
+        box-sizing: border-box;
+    }
+    .elementtypes--block {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        border: 5px solid;
+        background-color:blue;
+        margin: 5px;
+        display: block;
+        box-sizing: border-box;
+
+    }
+    .elementtypes--inline {
+        background-color: purple;
+        width: 100px; 
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        /*
+        span is inline by default.
+        -width,height are not applicable
+        -margin top, bottom are not appplicable
+        */
+    }
+    .elementtypes--inline-block {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        border: 5px solid;
+        background-color:blue;
+        margin: 5px;
+        display: inline-block; /* element does not go to new line*/
+        box-sizing: border-box;
+    }
+    .positioning__container {
+        height: 400px;
+        width: 400px;
+        background-color: yellow;
+    }
+    .positioning__container__div--default {
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+        border: 1px solid;
+    }
+    .positioning__container__div--relative {
+        position: relative;
+        /*
+         1] positions itselfs with respect to its default position.
+        */
+        left: 100px;
+    }
+    .positioning__container__div--absolute {
+        position: absolute;
+        /*
+            1] positions itselfs with respect to its nearest 'relatively' positioned parent. (mark div.positioning__container relative and see)
+            2] if there is no 'relatively' positioned parent, then positions itself with respect to window.
+        */
+        left: 100px;
+    }
+</style>
+<body>
+<h2>1] div with default box model</h2>
+<span>
+    box-sizing is content-box, so width/height = content width/height
+</span>
+<div class="default-box-model"></div>
+<h2>2] div with box sizing border-box</h2>
+<span>box-sizing is border-box</span>
+<span>width= content width + padding + border width</span><br/>
+<span>height= content height + padding + border height</span>
+<div class="default-box-model with-box-sizing--border-box"></div>
+<h2>3] types of elements</h2>
+<h3>block</h3>
+<div class="elementtypes--block"></div>  
+<h3>inline</h3>
+<p>hello <span class="elementtypes--inline">i am inline element</span> do you know me ?</p>
+<h3>inline block</h3>
+<div class="elementtypes--inline-block">1</div>
+<div class="elementtypes--inline-block">2</div>
+<h2>4] positioning</h2>  
+<div class="positioning__container">
+<div class="positioning__container__div--default">
+    default
+</div>
+<div class="positioning__container__div--default positioning__container__div--relative">
+    relative
+</div>
+<div class="positioning__container__div--default positioning__container__div--absolute">
+    absolute
+</div>
+
+</div>
+</body>
+</html>
