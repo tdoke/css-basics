@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+</head>
+<style>
+    p {
+        background-color: yellow;
+    }
+
+    .red-bcg {
+        background-color: red;
+    }
+
+    #idselector {
+        background-color: blue;
+    }
+
+    li[class] {
+        font-size: 200%;
+    }
+
+    li[class="a"] {
+        background-color: yellow;
+    }
+
+    li[class~="a"] {
+        color: red;
+    }
+
+    a:link,
+    a:visited {
+        color: rebeccapurple;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: hotpink;
+    }
+
+    article p::first-line {
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    .box::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        border: 1px solid black;
+    }
+
+    .box-2 p {
+        color: red;
+    }
+
+    ul.child-combinator > li {
+  border-top: 5px solid red;
+}
+</style>
+
+<body>
+    <h2>Type, class, and ID selectors</h2>
+    <p>this is type selector</p>
+    <div class="red-bcg">this is class selector</div>
+    <div id="idselector">this is id selector</div>
+    <h2>attribute selectos</h2>
+    <h1>Attribute presence and value selectors</h1>
+    <ul>
+        <li>Item 1</li>
+        <li class="a">Item 2</li>
+        <li class="a b">Item 3</li>
+        <li class="ab">Item 4</li>
+    </ul>
+    <h2>Pseudo-classes and pseudo-elements</h2>
+    <p><a href="">Hover over me</a></p>
+    <article>
+        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+            melon azuki bean garlic.</p>
+
+        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean
+            collard
+            greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    </article>
+    <p class="box">Content in the box in my HTML page.</p>
+    <h2>Combinators</h2>
+    <h3>Descendant combinator
+    </h3>
+    <div class="box-2">
+        <p>Text in .box</p>
+    </div>
+    <p>Text not in .box</p>
+    <h3>Child combinator</h3>
+    <ul class="child-combinator">
+        <li>Unordered item</li>
+        <li>Unordered item
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ol>
+        </li>
+      </ul>
+</body>
+
+</html>
