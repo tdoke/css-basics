@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing elements</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .parent {
+        border: 1px solid;
+        width: 100vw;
+        height: 100vh;
+    }
+    .child1 {
+        border: 1px solid;
+        width: 50%;
+        height: 50%;
+    }
+    .child2 {
+        border: 1px solid;
+        width: 25%;
+        height: 25%;
+    }
+    .child3 {
+        border: 1px solid blue;
+        width: 100%;
+        height: 100px;
+        max-width: 200px; 
+        /* width will never be more than max-width. this is useful for 
+        variable size content like images */
+    }
+    .child4 {
+        border: 1px solid blue;
+        width: 25px;
+        height: 100px;
+        min-width: 50px; 
+        /* width will never be lesser than min-width. this is useful for 
+        variable size content like images */
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3">
+            <!-- 
+                The max-width CSS property sets the maximum width of an element. 
+                It prevents the used value of the width property from becoming larger than the value
+                 specified by max-width.
+            -->
+        </div>
+        <div class="child4">
+            <!-- 
+                The min-width CSS property sets the minimum width of an element. It prevents the used 
+                value of the width property from becoming smaller than the value specified for min-width.
+            -->
+        </div>
+    </div>
+</body>
+</html>
