@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    background-color: #23424A;
+    padding: 50px;
+    margin: 0 auto;
+
+    /*
+    width: 900px;
+    */
+    /*
+     if u add a fixed width like above.and reduce the screen width below 900px, you will start seeing the horizontal 
+     scrolls.
+    */
+
+    width: 80%;
+    /* % like above works fine, even if we reduce screen width, no scrolls are added*/
+
+
+}
+
+.child {
+    background-color: #38CFD9;
+    width: 50%;
+    height: 250px;
+}
