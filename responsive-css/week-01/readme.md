@@ -5,3 +5,6 @@
 5] instead of using height, use padding with rem or em units. most of the times height creates problems.
 6] max-width limits the div from expanding on bigger screens. max-width to be used with media queries with fixed value px
 7] only one outermost parent container div (having text) should have max-width. not all of them in dom tree.
+
+flexbox:
+1] 
