@@ -1,0 +1,35 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    height: 50vh;
+    width: 50vw;
+    background-color: burlywood;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+}
+.flex-item {
+    background-color: pink;
+    margin: 0.5rem;
+    flex-basis: 250px; /* its like max-width for flex-items, flex item will not grow beyond this*/
+}
+
+.one {
+    flex: 2 2 250px; /*flex-grow, flex-shrink, flex-basis shorthand*/
+    order: 3;
+}
+
+.two {
+    flex: 1 1 250px;
+    align-self: flex-end;
+    order: 1;
+}
+
+/*
+flex-grow: 1; if there is available space(when screen width is increased) then grow by 1 grow-factor
+flex-shrink: 1; if space is reduced then shrink by 1 shrink factor.
+above factors can go from 0 to n
+*/

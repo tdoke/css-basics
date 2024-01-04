@@ -21,3 +21,10 @@ container 2]
 </container-1>
 7] always have img width: 100% for all images in website.
    when an image is shown inside a flex item. if img size < item size, img will be stretched to fill in item content.To avoid this use align-self: start, in an item containing image.
+8] flex container basics: https://flexbox.help/
+9] flex items props
+grow, shrink, basis, order
+10] by default a flex item height gets stretched to cover full height of its flex container.
+because on flex container, by default align-items is 'stretched'.
+11] a flex item using 'align-self' can override 'align-items' set from the flex container.
+12] a flex item using 'order' can order itself in items display.
