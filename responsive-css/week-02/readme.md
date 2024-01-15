@@ -2,7 +2,8 @@ flexbox
 1] flex applies to only direct children of the flex container
 2] flex container ==> the parent
 3] flex items ==> the children
-4] default size of div's is 100%, but in case of flex items by default they shrink down to their smallest possible size that can be.
+4] default size of div's is 100%, but in case of flex items by default they shrink down to their smallest possible size that can be. 
+4.1] A flex item by default occupies the smallest possible width, height inside a flex container
 5] if there are multiple flex items in a row and one of them has shorter content. then to make sure all of 
 them have equal width, make width: 100% for all the flex items
 <div flex-container direction-row>
@@ -28,3 +29,4 @@ grow, shrink, basis, order
 because on flex container, by default align-items is 'stretched'.
 11] a flex item using 'align-self' can override 'align-items' set from the flex container.
 12] a flex item using 'order' can order itself in items display.
+13] 'flex-basis' = its like max-width for flex-items, flex item will not grow beyond this
