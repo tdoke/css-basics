@@ -3,7 +3,7 @@ flexbox
 2] flex container ==> the parent
 3] flex items ==> the children
 4] default size of div's is 100%, but in case of flex items by default they shrink down to their smallest possible size that can be. 
-4.1] A flex item by default occupies the smallest possible width, height inside a flex container
+4.1] A flex item by default occupies the smallest possible width inside a flex container
 5] if there are multiple flex items in a row and one of them has shorter content. then to make sure all of 
 them have equal width, make width: 100% for all the flex items
 <div flex-container direction-row>
