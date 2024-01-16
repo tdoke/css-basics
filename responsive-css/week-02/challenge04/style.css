@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+.container--base {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1128px;
+    /* modify in media query */
+}
+
+.container-hero--base {
+    width: 40%;
+    margin: 0 auto;
+    max-width: 1128px;
+    /* modify in media query */
+}
+
+.container--backg {
+    padding: 4rem 0;
+}
+
+.container--backg--hero {
+    background-color: #f3eed9;
+    padding: 6rem 0;
+}
+
+.hero-text p {
+    text-transform: uppercase;
+    margin: 0px;
+    letter-spacing: 10px;
+}
+
+.hero-text h1 {
+    color: #824936;
+    margin: 0.5rem 0;
+    font-size: 3rem;
+}
+
+.hero-text-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quality-text h1 {
+    text-align: center;
+    color: #824936;
+}
+
+.quality-flex-container,
+.custom-flex-container,
+.ccc-flex-container {
+    display: flex;
+}
+
+.quality-flex-item+.quality-flex-item,
+.custom-flex-item+.custom-flex-item,
+.ccc-flex-item+.ccc-flex-item {
+    margin-left: 4rem;
+}
+
+.quality-flex-item-first,
+.custom-flex-item-first,
+.ccc-flex-item-first {
+    width: 50%;
+    min-width: 50%;
+}
+
+.custom-flex-backg {
+    background-color: black;
+}
+
+.custom-flex-item-first {
+    color: white;
+}
+
+.custom-flex-item-first h1,
+.ccc-flex-item-second h1 {
+    margin-top: 0;
+}
+
+.custom-flex-item--img,
+.ccc-flex-item--img {
+    width: 100%;
+    align-self: flex-start;    
+}
+
+.ccc-flex-backg {
+    background-color: #824936;
+    color: white;
+}
+
