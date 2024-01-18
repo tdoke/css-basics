@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: blue; 
+}
+
+.one {
+    margin: 100px;
+}
+
+.two {
+    margin: 50px 10px;
+}
+
+.three {
+    margin-left: auto;
+}
+
+.four {
+    margin-right: auto;
+}
+
+.five {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.six {
+    margin: 50px auto;
+}
+
+.seven {
+    padding: 50px 50px;
+}
+
+.eight {
+    padding: 100px 200px;
+}
+.content {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
