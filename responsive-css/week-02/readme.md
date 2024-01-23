@@ -20,4 +20,16 @@ grow, shrink, basis, order
 because on flex container, by default align-items is 'stretched'.
 11] a flex item using 'align-self' can override 'align-items' set from the flex container.
 12] a flex item using 'order' can order itself in items display.
-13] 'flex-basis' = its like max-width for flex-items, flex item will not grow beyond this
+13]     width: auto; means content will dectate width
+
+It originates from the exception in Flex Layout, that the 
+automatic minimum size for flex items defaults to min-content instead of 0 as usual. 
+In other words, the default min-width: auto computes to min-content instead of 0.
+
+flex-basis = width of flex-item, before grow/shrink is applied to it. 
+
+default
+flex: [grow] [shrink] [flex-basis]
+flex: 0 1 auto;
+
+use flex-basis, if you are going to play with grow and shrink.

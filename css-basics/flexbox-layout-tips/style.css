@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    background-color: lightgrey;
+    border: 1px solid grey;
+    padding: 50px 50px;
+    width: 100%;
+}
