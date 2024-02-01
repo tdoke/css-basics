@@ -6,10 +6,3 @@ eg. 3 flex items, total width gets divided among those 3.
     https://www.youtube.com/watch?v=qdf9Qa0xJe4
 
 
-    width: auto; means content will dectate width
-
-It originates from the exception in Flex Layout, that the 
-automatic minimum size for flex items defaults to min-content instead of 0 as usual. 
-In other words, the default min-width: auto computes to min-content instead of 0.
-
-flex-basis = width of flex-item, before grow/shrink is applied to it. 

@@ -1,0 +1,1 @@
+to make a navbar with logo, with navbar links aligned in the center.
