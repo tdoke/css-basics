@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+            width: 1000px;
+            background-color: lightgray;
+            border: 3px solid black;
+        }
+
+        .flex-item {
+            height: 200px;
+            width: 200px;
+            flex: 0 1 auto;         /*[flex-grow] [flex-shrink] [flex-basis]*/   
+        }
+        .flex-item span {
+            margin: auto;
+            font-weight: bolder;
+        }
+        .flex-item:nth-of-type(1) {
+            background-color: green;
+        }
+        .flex-item:nth-of-type(2) {
+            background-color: yellow;
+        }
+        .flex-item:nth-of-type(3) {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="flex-item"><span>One</span></div>
+        <div class="flex-item"><span>Two</span></div>
+        <div class="flex-item"><span>Three</span></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    <grow><shrink><basis> defaults to 0 1 auto;
+    1] increase flex-item width to 400px, stil all items will be contained in container,
+    this is because by default flex-shrink is 1
+    2] set flex-shrink to 0 and increase flex-item width to 400px, they will overflow the
+    container.
+    3] by default flex-basis is set to auto.
+    this means if flex item has a specified width (eg.200px), 
+    their initial starting width (before applying flex-grow or flex-shrink) will be specified width.
+    4] if you set item width to 0px and flex-basis is auto.
+       then their initial starting width will be minimum width occupied by their content
+    5] you can give flex-basis a specfic value (px, %, etc.) like a normal width property.
+    6] if you want each item to occupy max width it can occupy, set flex-basis: 100% this is better
+    than setting each flex items width TO 100%.
+    7] if you have items of different width's but want them to occupy equal width in flex container
+      7.1] set flex-basis: 100%.
+      7.2] set flex-grow: 1 , flex-basis: 0
+    8] if one of the flex item goes missing then remaining width should get equally divided amongst
+    remaining flex items.
+      8.1] set flex-basis: 100%.
+      8.2] set flex-grow: 1 , flex-basis: 0
+
+
+-->
